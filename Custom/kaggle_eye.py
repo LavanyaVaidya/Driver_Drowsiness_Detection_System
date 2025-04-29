@@ -94,7 +94,6 @@ while (True):
     cv2.putText(frame, 'Drowsiness:' + str(score), (300, height - 20), font, 1, (255, 255, 255), 1, cv2.LINE_AA)
     if (score > 10):
         # person is feeling sleepy so we beep the alarm
-        cv2.imwrite(os.path.join(path, 'image.jpg'), frame)
         try:
             sound.play()
 
